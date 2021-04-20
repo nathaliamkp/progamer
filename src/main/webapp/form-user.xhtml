@@ -21,8 +21,8 @@
 					</p:inputText>
 
 					<p:outputLabel value="Birthday" for="birthday" />
-					<p:calerdar id="birthday" value="#{userBean.user.birthday}" required="true" pattern="dd/MM/yyyy"
-					validatorMessage="birthday: Informe uma data correta">
+					<p:calendar id="birthday" value="#{userBean.user.birthday}" required="true" pattern="dd/MM/yyyy"
+						validatorMessage="Birthday: Informe uma data correta">
 						<f:ajax event="blur" render="messages" />
 					</p:calendar>
 
@@ -33,10 +33,11 @@
 					</p:inputText>
 					
 					<p:outputLabel value="Password" for="password" />
-					<p:inputText id="password" value="#{userBean.user.password}">
+					<p:password id="password" value="#{userBean.user.password}"
+					validatorMessage="Password: Deve ter 8 caracteres" required="true" togglesmask="true" redisplay="true">
 						<f:validateLength minimum="8"/>
 						<f:ajax event="blur" render="messages" />
-					</p:inputText>
+					</p:password>
 
 				</h:panelGrid>
 
