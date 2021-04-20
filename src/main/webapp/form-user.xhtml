@@ -15,7 +15,7 @@
 				<f:facet name="title">New User</f:facet>
 				<h:panelGrid columns="2">
 					<p:outputLabel value="Name" for="name" />
-					<p:inputText id="name" value="#{userBean.user.name}" required="true">
+					<p:inputText id="name" value="#{userBean.user.name}" required="true" >
 						<f:validateLength minimum="3" />
 						<f:ajax event="blur" render="messages" />
 					</p:inputText>
@@ -27,6 +27,7 @@
 
 					<p:outputLabel value="Email" for="email" />
 					<p:inputText id="email" value="#{userBean.user.email}">
+						<f:validateLength minimum="7"/>
 						<f:ajax event="blur" render="messages" />
 					</p:inputText>
 					
