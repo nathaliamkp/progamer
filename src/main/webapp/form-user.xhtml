@@ -21,9 +21,10 @@
 					</p:inputText>
 
 					<p:outputLabel value="Birthday" for="birthday" />
-					<p:datePicker id="birthday" value="#{userBean.user.birthday}">
+					<p:calerdar id="birthday" value="#{userBean.user.birthday}" required="true" pattern="dd/MM/yyyy"
+					validatorMessage="birthday: Informe uma data correta">
 						<f:ajax event="blur" render="messages" />
-					</p:datePicker>
+					</p:calendar>
 
 					<p:outputLabel value="Email" for="email" />
 					<p:inputText id="email" value="#{userBean.user.email}">
@@ -41,7 +42,7 @@
 
 				<f:facet name="footer">
 					<p:commandButton icon="pi pi-check" value="Save" action="#{userBean.save}">
-						<f:ajax execute="@form" render="form-setups" />
+						<f:ajax execute="@form" render="form-user" />
 					</p:commandButton>
 					<p:commandButton icon="pi pi-times" value="Cancel"
 						styleClass="ui-button-secondary" style="margin-left: .5em" />

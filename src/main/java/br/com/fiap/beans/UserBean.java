@@ -3,14 +3,14 @@ package br.com.fiap.beans;
 import java.util.List;
 
 import javax.faces.application.FacesMessage;
-import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
+import javax.inject.Named;
 
 import br.com.fiap.dao.UserDao;
 import br.com.fiap.model.User;
 
-@ManagedBean
+@Named
 @RequestScoped
 public class UserBean {
 	
